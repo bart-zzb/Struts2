@@ -3,9 +3,23 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+    <!-- package类似代码包，区别不同的action，要配置action
+       1. name属性：跟功能本身没有关系，主要用于区分不同package包的名称
+       2. extends属性：属性值固定的，struts-default，表示写了这个属性后，才能有action功能
+       3. namespace属性：要和action标签的name属性共同构建url访问路径，如当前为"/hello", 默认就是"/"
+       -->
     <package name="helloTemplate" extends="struts-default" namespace="/">
+
+        <!-- action的属性：
+            1. name属性: 跟package的namespace属性值构成访问路径
+            2. class属性: action全路径
+            3. method属性: action默认执行类的execute方法, 可以配置执行类的其他方法 -->
         <!-- name: 访问名称 -->
         <action name="hello" class="org.example.struts2.HelloAction">
+
+            <!-- result标签：根据action的方法返回值，配置到不同的路径里面
+               1. name属性：和方法的返回值一样
+               2. type属性：配置如何到路径中（转发或者重定向）, 默认值就是转发操作-->
             <!-- 配置方法的返回值到页面 -->
             <result name="ok">/hello.jsp</result>
         </action>
