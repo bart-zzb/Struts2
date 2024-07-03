@@ -5,12 +5,17 @@
 <struts>
     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
 
+<!--    <package name="BookMethod" extends="struts-default" namespace="/">-->
+<!--        &lt;!&ndash; 访问路径加"/addAction"  ->执行add方法      &ndash;&gt;-->
+<!--        <action name="addAction" class="org.example.struts2.BookAction" method="add">-->
+<!--        </action>-->
+<!--        &lt;!&ndash; 访问路径加"/updateAction" ->执行update方法      &ndash;&gt;-->
+<!--        <action name="updateAction" class="org.example.struts2.BookAction" method="update">-->
+<!--        </action>-->
+<!--    </package>-->
+
     <package name="BookMethod" extends="struts-default" namespace="/">
-        <!-- 访问路径加"/addAction"  ->执行add方法      -->
-        <action name="addAction" class="org.example.struts2.BookAction" method="add">
-        </action>
-        <!-- 访问路径加"/updateAction" ->执行update方法      -->
-        <action name="updateAction" class="org.example.struts2.BookAction" method="update">
-        </action>
+        <!-- 通过访问路径"/book_add" 或者 "/book_update" method属性通配*的值,写法为{1},1表示第几个*的值 -->
+         <action name="book_*" class="org.example.struts2.BookAction" method="{1}"></action>
     </package>
 </struts>

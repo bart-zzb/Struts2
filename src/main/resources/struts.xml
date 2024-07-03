@@ -35,4 +35,5 @@
 <!--    <include file="hello.xml"></include>-->
 
     <include file="book.xml"></include>
+    <include file="bookAndOrder.xml"></include>
 </struts>
