@@ -3,6 +3,10 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+
+    <!-- 修改struts2默认常量值   -->
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
     <!-- package类似代码包，区别不同的action，要配置action
        1. name属性：跟功能本身没有关系，主要用于区分不同package包的名称
        2. extends属性：属性值固定的，struts-default，表示写了这个属性后，才能有action功能
@@ -24,4 +28,7 @@
             <result name="ok">/hello.jsp</result>
         </action>
     </package>
+
+    <!-- 分模块开发示例, 引入hello.xml   -->
+<!--    <include file="hello.xml"></include>-->
 </struts>
