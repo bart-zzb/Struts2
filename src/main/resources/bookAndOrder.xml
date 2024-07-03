@@ -12,11 +12,16 @@
         </global-results>
 
         <action name="books" class="org.example.struts2.BookAction" >
-<!--            <result name="success">/hello.jsp</result>-->
+            <!-- 局部和全局页面都配置时, 最终会使用局部页面 -->
+            <!-- type属性默认是dispatcher, 转发
+                             redirect, 重定向-->
+            <result name="success" type="dispatcher">/index.jsp</result>
         </action>
 
         <action name="orders" class="org.example.struts2.OrderAction" >
-<!--            <result name="success">/hello.jsp</result>-->
+        <!-- type两种配置到其他action: chain, 转发到action, 一般不用
+                                    redirectAction, 重定向到其他action中, 标签写重定向action的name名称-->
+            <result name="success" type="redirectAction">books</result>
         </action>
     </package>
 </struts>
