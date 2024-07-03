@@ -26,9 +26,13 @@
                2. type属性：配置如何到路径中（转发或者重定向）, 默认值就是转发操作-->
             <!-- 配置方法的返回值到页面 -->
             <result name="ok">/hello.jsp</result>
+            <!-- 利用返回"none" 表示无返回值 -->
+            <result name="none"></result>
         </action>
     </package>
 
     <!-- 分模块开发示例, 引入hello.xml   -->
 <!--    <include file="hello.xml"></include>-->
+
+    <include file="book.xml"></include>
 </struts>
