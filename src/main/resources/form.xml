@@ -11,6 +11,7 @@
         <action name="form2" class="org.example.struts2.FormAction2"></action>
         <action name="form3" class="org.example.struts2.FormAction3"></action>
         <action name="form4" class="org.example.struts2.data.dataAction1"></action>
+        <action name="form5" class="org.example.struts2.data.dataAction2"></action>
     </package>
 
 </struts>
