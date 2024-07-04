@@ -36,4 +36,5 @@
 
     <include file="book.xml"></include>
     <include file="bookAndOrder.xml"></include>
+    <include file="form.xml"></include>
 </struts>
