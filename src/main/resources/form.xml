@@ -9,6 +9,8 @@
     <package name="formAction" extends="struts-default" namespace="/">
         <action name="form1" class="org.example.struts2.FormAction1"></action>
         <action name="form2" class="org.example.struts2.FormAction2"></action>
+        <action name="form3" class="org.example.struts2.FormAction3"></action>
+        <action name="form4" class="org.example.struts2.data.dataAction1"></action>
     </package>
 
 </struts>
