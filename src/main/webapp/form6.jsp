@@ -18,6 +18,8 @@
         <br/>
         address:<input type="text" name="user.address"/>
         <br/>
+        bookName:<input type="text" name="book.name"/>
+        <br/>
         <input type="submit" value="提交"/>
     </form>
 </body>

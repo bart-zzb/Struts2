@@ -6,6 +6,7 @@ import org.example.struts2.entity.User;
 
 /**
  * 使用模型驱动获取表单数据
+ * 只能封装到单一个实体类对象
  */
 public class dataAction2 extends ActionSupport implements ModelDriven<User> {
     //创建对象
