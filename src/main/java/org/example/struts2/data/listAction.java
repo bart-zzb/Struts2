@@ -26,5 +26,4 @@ public class listAction extends ActionSupport {
         System.out.println(list);
         return NONE;
     }
-
 }
