@@ -42,4 +42,10 @@
         <action name="userAction" class="org.example.struts2.UserAction">
         </action>
     </package>
+
+    <package name="ValueStackActionTemplate" extends="struts-default" namespace="/">
+        <action name="valueStack" class="org.example.struts2.ValueStackAction">
+            <result name="success">/valueStack.jsp</result>
+        </action>
+    </package>
 </struts>
