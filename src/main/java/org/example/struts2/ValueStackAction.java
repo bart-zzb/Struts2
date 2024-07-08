@@ -5,6 +5,9 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.util.ValueStack;
 import org.example.struts2.entity.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ValueStackAction extends ActionSupport {
 
     //定义变量
@@ -18,6 +21,11 @@ public class ValueStackAction extends ActionSupport {
     private User user;
     public User getUser() {
         return user;
+    }
+
+    private List<User> list = new ArrayList<User>();
+    public List<User> getList() {
+        return list;
     }
 
     @Override
@@ -38,6 +46,10 @@ public class ValueStackAction extends ActionSupport {
         user.setUsername("Bart");
         user.setPassword("abcdefghijklmnop");
         user.setAddress("HongKong");
+
+        //5 向值栈中放入list集合
+        list.add(user);
+
         return SUCCESS;
     }
 }
