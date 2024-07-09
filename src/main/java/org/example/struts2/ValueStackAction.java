@@ -32,22 +32,22 @@ public class ValueStackAction extends ActionSupport {
     public String execute() throws Exception {
         ActionContext context = ActionContext.getContext();
         ValueStack valueStack = context.getValueStack();
-        //1 调用set方法给值栈添加元素
+        //1 调用set方法给值栈添加元素, 会放到root, root底层是list
         valueStack.set("username", "Bart");
 
-        //2 调用push方法给值栈添加元素
+        //2 调用push方法给值栈添加元素, 会放到root, root底层是list
         valueStack.push("James ");
 
-        //3 变量以及变量get方法(最常用)
+        //3 变量以及变量get方法(最常用), 会放到context里面, context底层是的map集合
         name = "abcdefghijklmnop";
 
-        //4 向值栈中放对象
+        //4 向值栈中放对象, 会放到context里面, context底层是的map集合
         user = new User();
         user.setUsername("Bart");
         user.setPassword("abcdefghijklmnop");
         user.setAddress("HongKong");
 
-        //5 向值栈中放入list集合
+        //5 向值栈中放入list集合, 会放到context里面, context底层是的map集合
         list.add(user);
 
         return SUCCESS;

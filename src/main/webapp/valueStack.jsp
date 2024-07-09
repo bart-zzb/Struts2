@@ -50,5 +50,13 @@
         <s:property value="#user.password"/>
         <s:property value="#user.address"/>
     </s:iterator>
+
+    <%-- 获取set方法设置的值 根据名称获取值 --%>
+    <br/>
+    <s:property value="username"/>
+
+    <%-- 获取push方法设置的值 需要根据数组名称top获取 --%>
+    <br/>
+    <s:property value="[0].top"/>
 </body>
 </html>
