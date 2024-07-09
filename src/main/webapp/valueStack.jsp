@@ -12,6 +12,10 @@
     <title>Title</title>
 </head>
 <body>
+    <!-- 使用struts2标签查看值栈结构 -->
     <s:debug></s:debug>
+
+    <!-- 1获取字符串值 -->
+    <s:property value="name"/>
 </body>
 </html>
