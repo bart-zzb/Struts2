@@ -47,5 +47,8 @@
         <action name="valueStack" class="org.example.struts2.ValueStackAction">
             <result name="success">/valueStack.jsp</result>
         </action>
+        <action name="contextAction" class="org.example.struts2.ContextAction">
+            <result name="success">/context.jsp</result>
+        </action>
     </package>
 </struts>
