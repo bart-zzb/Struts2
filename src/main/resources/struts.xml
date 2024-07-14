@@ -44,7 +44,21 @@
     </package>
 
     <package name="ValueStackActionTemplate" extends="struts-default" namespace="/">
+        <!-- 1.声明拦截器 -->
+        <interceptors>
+            <interceptor name="loginIntercept" class="org.example.struts2.interceptor.LoginInterceptor"></interceptor>
+        </interceptors>
+
         <action name="valueStack" class="org.example.struts2.ValueStackAction">
+            <!-- 2.使用自定义拦截器 -->
+            <interceptor-ref name="loginIntercept">
+                <!-- 配置action里面哪些方法不进行拦截 -->
+                <param name="excludeMethods">login,add</param>
+            </interceptor-ref>
+
+            <!-- 3.在配置自定义拦截器后,需手动使用默认的拦截器 -->
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+
             <result name="success">/valueStack.jsp</result>
         </action>
         <action name="contextAction" class="org.example.struts2.ContextAction">
